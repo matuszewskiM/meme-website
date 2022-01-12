@@ -1,0 +1,80 @@
+.comment{
+    .comment-author{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        grid-area: author;
+        font-style: italic;
+        cursor: pointer;
+        .comment-author-img{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px $border_primary_1,
+                -1px -1px 5px $border_primary_1;
+        }
+    }
+    .comment-content{
+        overflow: hidden;
+        grid-area: content;
+        word-wrap: break-word;
+    }
+    .comment-rating{
+        .rating{
+            &.positive{
+                &::before{
+                    content: '+';
+                }
+                color: green;
+            }
+            &.negative{
+                color: red;
+            }
+            grid-area: rating;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            font-size: 1.2em;
+            font-weight: bolder;
+        }
+        .vote-button{
+            &.upvote{
+                color: #70C1B3;
+            }
+            &.downvote{
+                color: #F25F5C;
+            }
+            &:hover{
+                opacity: 75%;
+            }
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bolder;
+            border: solid 1px;
+            width: 1.2em;
+            height: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        display: flex;
+        gap: 10px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+        "author rating"
+        "content content";
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: solid 1px lighten($primary_1, 10%);
+    border-left: solid 1px lighten($primary_1, 5%);
+    background-color: lighten($primary_1, 1%);
+    margin-top: 10px;
+}

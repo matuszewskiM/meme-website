@@ -1,0 +1,56 @@
+$error_color: #AE2012;
+$success_color: #94D2BD;
+$warning_color: #EE9B00;
+.alert{
+    .cross-button{
+        &:hover{
+            opacity: 50%;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 100%;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.error{
+        background-color: $error_color;
+        color: darken($error_color, 25%);
+        border: solid 2px darken($error_color, 5%);
+    }
+    &.success{
+        background-color: $success_color;
+        color: darken($success_color, 25%);
+        border: solid 2px darken($success_color, 5%);
+    }
+    &.warning{
+        background-color: $warning_color;
+        color: darken($warning_color, 25%);
+        border: solid 2px darken($warning_color, 5%);
+    }
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto 40px;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    animation: slide 0.5s ease 0s 1 normal forwards;
+    @keyframes slide {
+        0% {
+          transform: translateX(-100vw);
+          opacity: 0%;
+        }
+      
+        100% {
+          transform: translateX(0vw);
+          opacity: 100%;
+        }
+      }
+}

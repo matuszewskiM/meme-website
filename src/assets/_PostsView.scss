@@ -1,0 +1,31 @@
+@import 'Post';
+.posts-container{
+    .loading-icon{
+        align-self: center;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        li{
+            list-style-type: none;
+            margin: 0 0 20px 0;
+        }
+    }
+    margin-right: 20px;
+    margin-left: auto;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px){
+    .posts-container{
+        width: 90%;
+    }
+}

@@ -1,0 +1,44 @@
+.add-post{
+    .post-form{
+        @extend .post;
+        .title-input{
+            &:focus{
+                opacity: 75%;
+            }
+            outline: none;
+            border-style: none;
+            border-radius: 5px;
+            background-color: inherit;
+            font-size: 1.5em;
+            height: 1.7em;;
+            color: $font_primary_1;
+            padding-left: 10px;
+            background-color: darken($primary_1, 10%);
+        }
+        .title-notice{
+            font-size: 0.9em;
+            color: #AE2012;
+        }
+        .categories{
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style-type: none;
+                    display: inline-block;
+                    padding: 5px;
+                    margin: 0;
+                }
+            }
+        }
+        .post-submit{
+            @extend .upvote-btn;
+        }
+        margin-bottom: 20vh;
+        background-color: darken($primary_1, 5%);
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}

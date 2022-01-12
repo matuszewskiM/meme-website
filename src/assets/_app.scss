@@ -1,0 +1,28 @@
+.app{
+    .alert-container{
+        ul{
+            padding: 0px;
+            margin: 0px;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            li{
+                list-style-type: none;
+                width: 100%;
+            }
+        }
+        position: fixed;
+        top: 10;
+        z-index: 1000;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+}

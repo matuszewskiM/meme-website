@@ -1,0 +1,59 @@
+.post-container{
+    ul{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        li{
+            list-style-type: none;
+            margin: 0 0 0 0;
+        }
+    }
+    width: 65%;
+    margin-right: 20px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.comment-form{
+    textarea{
+        outline: none;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: $border_primary_1;
+        resize: none;
+        width: 100%;
+        height: fit-content;
+        font-size: 1.2em;
+        padding: 10px;
+        color: inherit;
+        box-sizing: border-box;
+        background-color: inherit;
+    }
+    .comment-form-submit{
+        margin-top: 20px;
+        background-color: #70C1B3;
+        color: darken(#70C1B3, 25%);
+        &:hover{
+            background-color: $border_primary_1;
+            box-shadow: none;
+        }
+    }
+    &:hover{
+        opacity: 100%;
+    }
+    box-sizing: border-box;
+    opacity: 70%;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: darken($primary_1, 25%);
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .post-container{
+        width: 95%;
+        margin: auto;
+    }
+}

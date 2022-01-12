@@ -1,0 +1,33 @@
+.top-nav {
+    .top-nav-btn{
+        &:hover{
+            background-color: lighten($primary_1, 5%);
+            box-shadow: 0 2px 10px $border_primary_1;
+        }
+        color: darken($font_primary_1, 10%);
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0px 20px 0 20px;
+        border-radius: 2px;
+    }
+    background-color: darken($primary_1, 1%);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px $primary_1;
+}
+
+@media only screen and (max-width: 600px){
+    .top-nav{
+        height: 2.5em;
+        gap: 0;
+        justify-content: space-around;
+        background-color: lighten($primary_1, 10%);
+        opacity: 95%;
+    }
+}

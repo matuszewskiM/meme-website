@@ -1,0 +1,104 @@
+.login-modal{
+    .login-form{
+        h2{
+            margin: 0 auto 0 auto;
+            letter-spacing: 4px;
+        }
+        .cross-button{
+            &:hover{
+                opacity: 50%;
+            }
+            color: #EE9B00;
+            margin-right: 10px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+        input{
+            &.nickname{
+                margin-bottom: 20px;
+            }
+            &.password{
+                letter-spacing: 0.3em;
+            }
+            &:focus{
+                opacity: 80%;
+            }
+            color: lighten(#EE9B00, 25%);
+            letter-spacing: 0.1em;
+            outline: none;
+            border-style: none;
+            border-radius: 5px;
+            padding-left: 10px;
+            background-color: darken(#005F73, 10%);
+            font-size: 1.2em;
+            height: 2em;
+        }
+        .login-submit{
+            &:hover{
+                background-color: darken(#EE9B00, 5%);
+            }
+            background-color: #EE9B00;
+            color: darken($font_primary_1, 60%);
+            margin-top: 25px;
+            margin-bottom: 0;
+        }
+        .notice{
+            min-height: 2em;
+            font-size: 0.7em;
+            color: #AE2012;
+        }
+        font-weight: bolder;
+        font-size: 1.1em;
+        padding: 20px;
+        background-image: radial-gradient(#005F73, darken(#005F73, 10%));
+        border-radius: 10px;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        width: 25vw;
+        height: fit-content;
+        // == animation ==
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        @keyframes scale-up-center {
+            0% {
+              -webkit-transform: scale(0.5);
+                      transform: scale(0.5);
+            }
+            100% {
+              -webkit-transform: scale(1);
+                      transform: scale(1);
+            }
+          }          
+    }
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+    .login-modal{
+        .login-form{
+            h2{
+                margin-bottom: 15px;
+            }
+            input{
+                font-size: 1em;
+                height: 1.5em;
+            }
+            .notice{
+                font-size: 0.7em;
+            }
+            .login-submit{
+                height: 2em;
+            }
+            width: 80%;
+        }
+    }
+    
+}

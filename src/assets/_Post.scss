@@ -1,0 +1,90 @@
+.post{
+    .title{
+        &:hover{
+            opacity: 75%;
+        }
+        cursor: pointer;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .date{
+        font-size: 0.8em;
+        opacity: 50%;
+    }
+    .categories{
+        .category{
+            &:hover{
+                text-decoration: underline;
+                color: lighten(#0A9396, 10%);
+            }
+            cursor: pointer;
+        }
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        color: #0A9396;
+    }
+    .meme-img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .author{
+        &::before{
+            content: 'author: ';
+        }
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        opacity: 40%;
+        width: fit-content;
+        font-size: 0.9em;
+    }
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: darken($primary_1, 10%);
+}
+.upvote{
+    display: flex;
+    gap: 10px;
+}
+$upvote-button-color: #0A9396;
+.upvote-btn{
+    &:hover{
+        background-color: darken($upvote-button-color, 10%);
+        color: darken($upvote-button-color, 25%);
+    }
+    color: darken($upvote-button-color, 20%);
+    background-color: $upvote-button-color; 
+}
+.upvote-counter{
+    @extend .btn;
+    pointer-events: none;
+    padding: 0 10px 0 10px;
+    max-width: 4em;
+    opacity: 75%;
+    color: lighten($upvote-button-color, 15%);
+    background-color: darken($upvote-button-color, 15%); 
+}
+
+@media only screen and (max-width: 600px){
+    .post{
+        .title{
+            font-size: 20px;
+        }
+        .categories{
+            .category{
+                font-size: 0.8em;
+            }
+        }
+        padding: 10px 15px 10px 15px;
+    }
+}

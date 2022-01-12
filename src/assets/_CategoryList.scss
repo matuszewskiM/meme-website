@@ -1,0 +1,38 @@
+.category-list{
+    .category{
+        span{
+            &::before{
+                content: "(";
+            }
+            &::after{
+                content: ")";
+            }
+            font-size: 0.9em;
+        }
+        &:hover{
+            text-decoration: underline;
+            color: lighten(#0A9396, 10%);
+        }
+        cursor: pointer;
+    }
+    background-color: lighten($primary_1, 5%);
+    margin-top: 100px;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: #0A9396;
+    padding: 20px;
+    width: 20vw;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px lighten($primary_1, 5%), 
+        -1px -1px 5px lighten($primary_1, 5%);
+}
+
+@media only screen and (max-width: 600px) {
+    .category-list{
+        display: none;
+    }
+}
